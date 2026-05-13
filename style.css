@@ -1,0 +1,480 @@
+
+:root {
+  --principal: rgb(146, 64, 14);
+  --secondaire: rgb(17, 24, 39);
+  --accent: rgb(217, 119, 6);
+  --fond-clair: rgb(254, 243, 199);
+  --fond-carte: rgb(255, 255, 255);
+  --texte-principal: rgb(31, 41, 55);
+  --texte-secondaire: rgb(107, 114, 128);
+  --vert: rgb(6, 95, 70);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: var(--texte-principal);
+  background-color: rgb(255, 253, 250);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.entete {
+  background-color: var(--secondaire);
+  color: rgb(255, 255, 255);
+  padding: 20px 0;
+}
+
+.conteneur-entete,
+.contenu-footer {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.navigation {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.navigation a {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+.navigation a.actif,
+.navigation a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 70px 0;
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.hero-texte {
+  max-width: 560px;
+}
+
+.etiquette {
+  display: inline-block;
+  background-color: var(--fond-clair);
+  color: var(--principal);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.6rem, 4vw, 4rem);
+  margin: 0 0 20px;
+  color: var(--secondaire);
+}
+
+.hero p {
+  color: var(--texte-secondaire);
+  margin-bottom: 28px;
+  font-size: 1.05rem;
+}
+
+.hero-boutons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-principal,
+.btn-secondaire {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: 999px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  font-weight: 600;
+}
+
+.btn-principal {
+  background-color: var(--principal);
+  color: #fff;
+}
+
+.btn-secondaire {
+  background-color: rgba(146, 64, 14, 0.1);
+  color: var(--principal);
+}
+
+.btn-principal:hover,
+.btn-secondaire:hover {
+  transform: translateY(-2px);
+}
+
+.hero-image {
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: 0 24px 52px rgba(17, 24, 39, 0.12);
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.presentation,
+.produits-phare,
+.avantages,
+.section-a-propos,
+.section-formulaire {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.presentation-texte {
+  max-width: 720px;
+}
+
+.presentation-texte h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.4rem;
+  margin-bottom: 18px;
+}
+
+.presentation-texte p {
+  color: var(--texte-secondaire);
+  font-size: 1.05rem;
+}
+
+.produits-phare h2,
+.section-a-propos h2,
+.section-intro h1 {
+  margin-bottom: 24px;
+}
+
+.grille-produits,
+.section-cartes {
+  display: grid;
+  gap: 24px;
+}
+
+.grille-produits,
+.section-cartes {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.produit-card,
+.carte-collection,
+.avantage-card {
+  background-color: var(--fond-carte);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(17, 24, 39, 0.08);
+}
+
+.produit-card img,
+.carte-collection img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.produit-card h3,
+.carte-contenu h2,
+.bloc-a-propos h2 {
+  margin: 18px 0 12px;
+  font-size: 1.4rem;
+}
+
+.produit-card p,
+.carte-contenu p,
+.bloc-a-propos p {
+  margin: 0 0 16px;
+  color: var(--texte-secondaire);
+}
+
+.carte-contenu {
+  padding: 24px;
+}
+
+.carte-collection {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.carte-collection img {
+  height: 260px;
+  object-fit: cover;
+}
+
+.carte-produit,
+.produit-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 28px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.carte-produit:hover,
+.produit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(17, 24, 39, 0.18);
+}
+
+.carte-produit img,
+.produit-card img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  object-position: center;
+  filter: saturate(1.05) contrast(1.02);
+  background-color: rgb(247, 239, 228);
+  transition: transform 0.25s ease;
+}
+
+.carte-produit:hover img,
+.produit-card:hover img {
+  transform: scale(1.04);
+}
+
+.categorie {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.prix {
+  font-size: 1.15rem;
+  color: var(--principal);
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.prix::before {
+  content: '';
+}
+
+.btn-secondaire {
+  margin-top: auto;
+  width: fit-content;
+  border: 2px solid var(--principal);
+}
+
+.avantages {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.avantage-card {
+  padding: 28px;
+  text-align: center;
+}
+
+.avantage-card h3 {
+  margin-bottom: 12px;
+}
+
+.section-intro {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  align-items: center;
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.section-intro .texte-intro h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  margin: 0 0 18px;
+}
+
+.section-intro .texte-intro p {
+  color: var(--texte-secondaire);
+  max-width: 620px;
+}
+
+.section-intro .image-texte img,
+.image-texte {
+  width: 100%;
+  border-radius: 24px;
+  display: block;
+}
+
+.section-a-propos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.bloc-a-propos {
+  background-color: var(--fond-carte);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 18px 40px rgba(17, 24, 39, 0.08);
+}
+
+.section-formulaire {
+  display: flex;
+  justify-content: center;
+}
+
+.formulaire-contact {
+  width: min(720px, 100%);
+  display: grid;
+  gap: 18px;
+  background-color: var(--fond-carte);
+  padding: 32px;
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(17, 24, 39, 0.08);
+}
+
+.formulaire-contact label {
+  font-weight: 600;
+}
+
+.formulaire-contact input,
+.formulaire-contact select,
+.formulaire-contact textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 14px;
+  font: inherit;
+  color: var(--texte-principal);
+}
+
+.formulaire-contact textarea {
+  resize: vertical;
+}
+
+.pied-de-page {
+  background-color: var(--secondaire);
+  color: rgb(255, 255, 255);
+  padding: 32px 0;
+}
+
+.contenu-footer {
+  flex-direction: column;
+  gap: 14px;
+}
+
+.liens-footer,
+.infos-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.liens-footer a {
+  color: rgb(255, 255, 255);
+  opacity: 0.85;
+}
+
+.liens-footer a:hover {
+  opacity: 1;
+}
+
+.infos-footer p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+@media (max-width: 980px) {
+  .hero,
+  .section-intro,
+  .section-a-propos,
+  .presentation,
+  .produits-phare,
+  .avantages,
+  .section-formulaire {
+    width: min(100%, calc(100% - 32px));
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero,
+  .section-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .grille-produits,
+  .section-cartes,
+  .avantages,
+  .section-a-propos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .conteneur-entete,
+  .contenu-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navigation {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .grille-produits,
+  .section-cartes,
+  .avantages,
+  .section-a-propos {
+    grid-template-columns: 1fr;
+  }
+
+  .hero,
+  .section-intro {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hero-boutons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-principal,
+  .btn-secondaire {
+    width: 100%;
+    text-align: center;
+  }
+}
